@@ -1,4 +1,4 @@
-const deploy_mode = 2; // 0: localhost, 1: publish on host, 2: publish on dedicated server
+const deploy_mode = process.env.REACT_APP_DEPLOY_MODE; // 0: localhost, 1: publish on host, 2: publish on dedicated server
 const dev_mode = true;
 
 module.exports = {
@@ -10,7 +10,7 @@ module.exports = {
 						// "http://52.221.179.43:3001" 
 						//"https://52.221.179.43:3001" 
 						// "https://52.221.179.43:3001" 
-						"https://onerep.uniblocks.net:3001"
+						"https://onerep.uniblocks.net:8443"
 					),
 	CHAIN_NAME: dev_mode ? "Harmony DevNet" : "Harmony",
 	CHAIN_ID: dev_mode ? 1666900000: 1666600000,
